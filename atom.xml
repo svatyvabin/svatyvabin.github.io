@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-02T22:29:25+08:00</updated>
+  <updated>2015-12-02T22:46:00+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -165,38 +165,6 @@
 <h2>4. 待续</h2>
 
 <blockquote><p>A blogging framework for hackers.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My First Blog in Octopress]]></title>
-    <link href="http://svatyvabin.github.io/blog/2015/12/02/my-first-blog-in-octopress/"/>
-    <updated>2015-12-02T19:27:59+08:00</updated>
-    <id>http://svatyvabin.github.io/blog/2015/12/02/my-first-blog-in-octopress</id>
-    <content type="html"><![CDATA[<p>Hi, I using the Octopress blogging framework.</p>
-
-<p>It&rsquo;s very nice.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>TEST</p>
-
-<p>EOF</p>
 ]]></content>
   </entry>
   
