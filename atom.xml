@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-02T19:40:49+08:00</updated>
+  <updated>2015-12-02T19:58:31+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在 Github Pages 上使用 Octopress 创建自己的博客]]></title>
+    <link href="http://svatyvabin.github.io/blog/2015/12/02/zai-github-pages-shang-shi-yong-octopress-chuang-jian-zi-ji-de-bo-ke/"/>
+    <updated>2015-12-02T19:50:37+08:00</updated>
+    <id>http://svatyvabin.github.io/blog/2015/12/02/zai-github-pages-shang-shi-yong-octopress-chuang-jian-zi-ji-de-bo-ke</id>
+    <content type="html"><![CDATA[<h2>1. <a href="http://octopress.org/docs/setup/">安装 Octopress</a></h2>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My First Blog in Octopress]]></title>
