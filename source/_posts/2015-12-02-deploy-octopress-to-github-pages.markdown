@@ -2,6 +2,7 @@
 layout: post
 title: "在 Github Pages 上使用 Octopress 创建自己的博客"
 date: 2015-12-02 19:50:37 +0800
+author: svatyvabin
 comments: true
 categories:
 - Octopress
