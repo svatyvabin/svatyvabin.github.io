@@ -18,4 +18,6 @@ int main ()
 }
 ```
 
+TEST
+
 EOF
