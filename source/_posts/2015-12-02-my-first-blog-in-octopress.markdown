@@ -8,3 +8,14 @@ categories:
 Hi, I using the Octopress blogging framework.
 
 It's very nice.
+```c
+#include <stdio.h>
+
+int main ()
+{
+    printf("Hello");
+    return 0;
+}
+```
+
+EOF
