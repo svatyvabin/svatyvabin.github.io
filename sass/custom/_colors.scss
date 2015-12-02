@@ -39,5 +39,5 @@ $base3:           #fdf6e3; //white
 
 /* Non highlighted code colors */
 $pre-bg: $base3;
-//$pre-border: darken($base02, 5);
-//$pre-color: $base1;
+$pre-border: darken($base3, 5);
+$pre-color: $base3;
