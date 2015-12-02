@@ -21,7 +21,7 @@ sudo gem install execjs
 gem 下载速度比较慢，耐心等待，如果提示 ``Error`` 或者一直没有响应，可以用淘宝提供的[ gem 镜像](https://ruby.taobao.org/)。
 
 ### 1.2 安装 Octopress
-下载 Octopress，并进入 Octopress 目录：
+下载 octopress，并进入 octopress 目录：
 ```
 git clone git://github.com/imathis/octopress.git octopress
 cd octopress
@@ -40,10 +40,10 @@ bundle install
 rake install
 ```
 
-## 2. 部署到 Github Pages 上
+## 2. [部署到 Github Pages 上](http://octopress.org/docs/deploying/github/)
 ### 2.1 创建 Github Pages
 根据 [Github Pages](https://pages.github.com/) 官网的简易教程，就可以创建一个自己的 Github Pages 网站了。
-需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 Joe，那你的 repository 名称就必须是 joe.github.io。
+需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 joe，那你的 repository 名称就必须是 joe.github.io。
 
 创建成功后，为了方便以后使用 git 命令，建议在 [github](https://github.com/settings/ssh) 的设置中添加本机的 ``SSH keys``，这样就不需要输入密码了，如何生成 ``SSH keys`` 可以参考[上面的官方教程](https://help.github.com/articles/generating-ssh-keys/#platform-linux)。
 
@@ -52,7 +52,7 @@ rake install
 ```
 rake setup_github_pages
 ```
-之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 ``git@github.com:joe/joe.github.io.git`` 的地址就粘贴到这里就行了（使用 Ctrl + Shift + V）。
+之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 ``git@github.com:joe/joe.github.io.git`` 的地址就粘贴到这里就行了（快捷键 ``Ctrl + Shift + V``）。
 
 之后使用命令：
 ```
@@ -76,6 +76,38 @@ git push origin source
 
 现在就可以访问 ``joe.github.io`` 来查看你的博客是否部署成功了。
 
-## 3. 写博客
+## 3. [写博客](http://octopress.org/docs/blogging/)
+网站部署好了，终于可以开始写博客了。
 
+使用命令：
+```
+rake new_post["First post"]
+```
+就会自动在 ``source/_posts/`` 目录下生成一个文件名为 ``2015-12-02-first-post.markdown`` 的文件：
+使用 ``rake new_post`` 的时候，博客标题尽量用英文，然后在编辑的时候将 title 改成中文，这样文件名就会有意义，如果用中文标题，文件名会自动改成汉字拼音。
 
+然后你就可以使用你喜欢的编辑器去编辑这个文件了：
+```
+---
+layout: post
+title: "First post"
+date: 2015-12-02 20:47:13 +0800
+comments: true
+categories: 
+---
+Hello, Octopress.
+```
+除了最后一行外，其他的内容是创建博客的时候自动生成的。
+
+写好博客后，就可以发布到自己的 Github Pages 上了：
+```
+rake generate
+rake deploy
+
+git add .
+git commit -m "post title"
+git push origin source
+```
+
+## 4. 待续
+> A blogging framework for hackers.
