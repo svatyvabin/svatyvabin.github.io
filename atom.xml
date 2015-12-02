@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-02T20:56:46+08:00</updated>
+  <updated>2015-12-02T21:01:01+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,19 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[First Post]]></title>
-    <link href="http://svatyvabin.github.io/blog/2015/12/02/first-post/"/>
-    <updated>2015-12-02T20:47:13+08:00</updated>
-    <id>http://svatyvabin.github.io/blog/2015/12/02/first-post</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[在 Github Pages 上使用 Octopress 创建自己的博客]]></title>
-    <link href="http://svatyvabin.github.io/blog/2015/12/02/zai-github-pages-shang-shi-yong-octopress-chuang-jian-zi-ji-de-bo-ke/"/>
+    <link href="http://svatyvabin.github.io/blog/2015/12/02/deploy-octopress-to-github-pages/"/>
     <updated>2015-12-02T19:50:37+08:00</updated>
-    <id>http://svatyvabin.github.io/blog/2015/12/02/zai-github-pages-shang-shi-yong-octopress-chuang-jian-zi-ji-de-bo-ke</id>
+    <id>http://svatyvabin.github.io/blog/2015/12/02/deploy-octopress-to-github-pages</id>
     <content type="html"><![CDATA[<h2>1. <a href="http://octopress.org/docs/setup/">安装 Octopress</a></h2>
 
 <h3>1.1 安装必要的软件</h3>
@@ -130,10 +121,10 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["First post"]</span></code></pre></td></tr></table></div></figure>
 
 
-<p>就会自动在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件：
+<p>就会自动在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件
 使用 <code>rake new_post</code> 的时候，博客标题尽量用英文，然后在编辑的时候将 title 改成中文，这样文件名就会有意义，如果用中文标题，文件名会自动改成汉字拼音。</p>
 
-<p>然后你就可以使用你喜欢的编辑器去编辑这个文件了：</p>
+<p>然后就可以使用喜欢的编辑器去编辑这个文件了：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
