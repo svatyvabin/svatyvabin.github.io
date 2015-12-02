@@ -105,7 +105,7 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
 
 <h3>1.2 安装 Octopress</h3>
 
-<p>下载 Octopress，并进入 Octopress 目录：</p>
+<p>下载 octopress，并进入 octopress 目录：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -131,12 +131,12 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
 
 
-<h2>2. 部署到 Github Pages 上</h2>
+<h2>2. <a href="http://octopress.org/docs/deploying/github/">部署到 Github Pages 上</a></h2>
 
 <h3>2.1 创建 Github Pages</h3>
 
 <p>根据 <a href="https://pages.github.com/">Github Pages</a> 官网的简易教程，就可以创建一个自己的 Github Pages 网站了。
-需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 Joe，那你的 repository 名称就必须是 joe.github.io。</p>
+需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 joe，那你的 repository 名称就必须是 joe.github.io。</p>
 
 <p>创建成功后，为了方便以后使用 git 命令，建议在 <a href="https://github.com/settings/ssh">github</a> 的设置中添加本机的 <code>SSH keys</code>，这样就不需要输入密码了，如何生成 <code>SSH keys</code> 可以参考<a href="https://help.github.com/articles/generating-ssh-keys/#platform-linux">上面的官方教程</a>。</p>
 
@@ -148,7 +148,7 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
 
 
-<p>之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 <code>git@github.com:joe/joe.github.io.git</code> 的地址就粘贴到这里就行了（使用 Ctrl + Shift + V）。</p>
+<p>之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 <code>git@github.com:joe/joe.github.io.git</code> 的地址就粘贴到这里就行了（快捷键 <code>Ctrl + Shift + V</code>）。</p>
 
 <p>之后使用命令：</p>
 
@@ -180,7 +180,60 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
 
 <p>现在就可以访问 <code>joe.github.io</code> 来查看你的博客是否部署成功了。</p>
 
-<h2>3. 写博客</h2>
+<h2>3. <a href="http://octopress.org/docs/blogging/">写博客</a></h2>
+
+<p>网站部署好了，终于可以开始写博客了。</p>
+
+<p>使用命令：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["First post"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>就会自动在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件：
+使用 <code>rake new_post</code> 的时候，博客标题尽量用英文，然后在编辑的时候将 title 改成中文，这样文件名就会有意义，如果用中文标题，文件名会自动改成汉字拼音。</p>
+
+<p>然后你就可以使用你喜欢的编辑器去编辑这个文件了：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>title: "First post"
+</span><span class='line'>date: 2015-12-02 20:47:13 +0800
+</span><span class='line'>comments: true
+</span><span class='line'>categories: 
+</span><span class='line'>---
+</span><span class='line'>Hello, Octopress.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>除了最后一行外，其他的内容是创建博客的时候自动生成的。</p>
+
+<p>写好博客后，就可以发布到自己的 Github Pages 上了：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span><span class='line'>
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "post title"
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>4. 待续</h2>
+
+<blockquote><p>A blogging framework for hackers.</p></blockquote>
 </div>
 
 
@@ -222,6 +275,8 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
         <a class="basic-alignment left" href="/blog/2015/12/02/my-first-blog-in-octopress/" title="Previous Post: My first blog in octopress">&laquo; My first blog in octopress</a>
       
       
+        <a class="basic-alignment right" href="/blog/2015/12/02/first-post/" title="Next Post: First post">First post &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -233,6 +288,10 @@ sudo apt-get install ruby ruby-dev nodejs rbenv sudo gem install execjs gem 下�
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/12/02/first-post/">First Post</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/12/02/zai-github-pages-shang-shi-yong-octopress-chuang-jian-zi-ji-de-bo-ke/">在 Github Pages 上使用 Octopress 创建自己的博客</a>
