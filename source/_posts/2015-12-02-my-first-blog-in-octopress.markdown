@@ -2,6 +2,7 @@
 layout: post
 title: "My first blog in octopress"
 date: 2015-12-02 19:27:59 +0800
+published: false
 comments: true
 categories: 
 ---
