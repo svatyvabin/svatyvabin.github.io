@@ -13,9 +13,8 @@ categories:
 ## 1. [安装 Octopress](http://octopress.org/docs/setup/)
 ### 1.1 安装必要的软件
 在终端下输入：
-```
-sudo apt-get install ruby ruby-dev nodejs rbenv
-
+```bash
+sudo apt-get install ruby ruby-dev nodejs rbenv #install software
 sudo gem install execjs
 ```
 
