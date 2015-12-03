@@ -30,7 +30,7 @@ cd octopress
 
 然后安装依赖：
 ```
-gem install bundler
+sudo gem install bundler
 rbenv rehash
 bundle install
 ```
