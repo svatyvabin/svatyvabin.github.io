@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T14:28:40+08:00</updated>
+  <updated>2015-12-03T14:30:36+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -23,11 +23,12 @@
 <h3>1.1 安装必要的软件</h3>
 
 <p>在终端下输入：
-```
-sudo apt-get install ruby ruby-dev nodejs rbenv</p>
-
-<p>sudo gem install execjs
-```</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ruby ruby-dev nodejs rbenv&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;sudo gem install execjs</span></code></pre></td></tr></table></div></figure></p>
 
 <p>gem 下载速度比较慢，耐心等待，如果提示 <code>Error</code> 或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>，修改 gem 和 bundle 这两个镜像。</p>
 
@@ -117,20 +118,24 @@ Hello, Octopress.
 <p>除了最后一行外，其他的内容是创建博客的时候自动生成的。</p>
 
 <p>写好博客后，就可以发布到自己的 Github Pages 上了：
-```
-rake generate
-rake deploy</p>
-
-<p>git add .
-git commit -m &ldquo;post title&rdquo;
-git push origin source
-```</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;git add .
+</span><span class='line'>git commit -m &ldquo;post title&rdquo;
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure></p>
 
 <h2>4. 待续</h2>
 
-<p>{% img ./hitcat.gif %}</p>
+<p><img src="./hitCat.gif"></p>
 
-<pre><code class="shell One command to push  ">rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;
+<pre><code class="">rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;
 </code></pre>
 ]]></content>
   </entry>
