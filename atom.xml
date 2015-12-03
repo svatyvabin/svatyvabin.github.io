@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T13:49:05+08:00</updated>
+  <updated>2015-12-03T13:52:08+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -32,7 +32,7 @@
 </span><span class='line'>sudo gem install execjs</span></code></pre></td></tr></table></div></figure>
 
 
-<p>gem 下载速度比较慢，耐心等待，如果提示 <code>Error</code> 或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>。</p>
+<p>gem 下载速度比较慢，耐心等待，如果提示 <code>Error</code> 或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>，修改 gem 和 bundle 这两个镜像。</p>
 
 <h3>1.2 安装 Octopress</h3>
 
