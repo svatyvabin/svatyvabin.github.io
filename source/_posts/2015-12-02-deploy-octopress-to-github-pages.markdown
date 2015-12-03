@@ -117,3 +117,5 @@ rake generate;rake deploy;git add .;git commit -m "post title";git push origin s
 ```
 
 ![test](https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif)
+
+{% video https://github.com/svatyvabin/svatyvabin.github.io/raw/source/source/_posts/gogoro.mkv %}
