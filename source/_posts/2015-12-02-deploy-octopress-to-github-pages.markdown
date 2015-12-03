@@ -19,7 +19,7 @@ sudo apt-get install ruby ruby-dev nodejs rbenv
 sudo gem install execjs
 ```
 
-gem 下载速度比较慢，耐心等待，如果提示 ``Error`` 或者一直没有响应，可以用淘宝提供的[ gem 镜像](https://ruby.taobao.org/)。
+gem 下载速度比较慢，耐心等待，如果提示 ``Error`` 或者一直没有响应，可以用淘宝提供的[ gem 镜像](https://ruby.taobao.org/)，修改 gem 和 bundle 这两个镜像。
 
 ### 1.2 安装 Octopress
 下载 octopress，并进入 octopress 目录：
