@@ -111,8 +111,8 @@ git push origin source
 ```
 
 ## 4. 待续
-{% img ./hitcat.gif %}
+{% img ./hitCat.gif %}
 
-```shell One command to push  
+```  
 rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;
 ```
