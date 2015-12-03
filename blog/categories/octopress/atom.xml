@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T14:47:13+08:00</updated>
+  <updated>2015-12-03T14:49:30+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -137,8 +137,6 @@ Hello, Octopress.
 </code></pre>
 
 <p><img src="https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif" alt="test" /></p>
-
-<p>Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}</p>
 ]]></content>
   </entry>
   
