@@ -117,4 +117,3 @@ rake generate;rake deploy;git add .;git commit -m "post title";git push origin s
 ```
 
 ![test](https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif)
-
