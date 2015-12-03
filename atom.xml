@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T17:09:10+08:00</updated>
+  <updated>2015-12-03T17:25:30+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -26,12 +26,25 @@
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ruby ruby-dev nodejs rbenv <span class="c">#install software</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ruby ruby-dev nodejs rbenv
 </span><span class='line'>sudo gem install execjs
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>gem 下载速度比较慢，耐心等待，如果提示 <code>Error</code> 或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>，修改 gem 和 bundle 这两个镜像。</p>
+<p>如果 gem 提示 <code>Error</code> 之类的信息或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>修改 gem 和 bundle 这两个镜像：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem sources --add https://ruby.taobao.org/ <span class="c"># 添加淘宝镜像</span>
+</span><span class='line'>gem sources --remove https://rubygems.org/ <span class="c"># 删除镜像</span>
+</span><span class='line'>gem sources -l <span class="c"># 确保只有 https://ruby.taobao.org</span>
+</span><span class='line'>
+</span><span class='line'>bundle config mirror.https://rubygems.org https://ruby.taobao.org <span class="c"># 替换 bundle 镜像</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>1.2 安装 Octopress</h3>
 
@@ -71,38 +84,36 @@
 <p>根据 <a href="https://pages.github.com/">Github Pages</a> 官网的简易教程，就可以创建一个自己的 Github Pages 网站了。
 需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 joe，那你的 repository 名称就必须是 joe.github.io。</p>
 
-<p>创建成功后，为了方便以后使用 git 命令，建议在 <a href="https://github.com/settings/ssh">github</a> 的设置中添加本机的 <code>SSH keys</code>，这样就不需要输入密码了，如何生成 <code>SSH keys</code> 可以参考<a href="https://help.github.com/articles/generating-ssh-keys/#platform-linux">上面的官方教程</a>。</p>
+<p>创建成功后，为了方便以后使用 git 命令，建议在 <a href="https://github.com/settings/ssh">github</a> 的设置中添加本机的 <code>SSH keys</code>，这样就不需要输入密码了，如何生成 <code>SSH keys</code> 可以参考 <a href="https://help.github.com/articles/generating-ssh-keys/#platform-linux">Github 的官方教程</a>。</p>
 
 <h3>2.2 部署到 Github Pages</h3>
 
-<p>在 octopress 目录下，使用命令：</p>
+<p>在 octopress 目录下，执行：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake setup_github_pages
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 <code>git@github.com:joe/joe.github.io.git</code> 的地址就粘贴到这里就行了（快捷键 <code>Ctrl + Shift + V</code>）。</p>
+<p>然后粘贴你的 SSH repository 地址，如 <code>git@github.com:joe/joe.github.io.git</code>。</p>
 
-<p>之后使用命令：</p>
+<p>之后生成博客主页：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>生成博客。</p>
-
-<p>使用命令：</p>
+<p>将博客主页上传到 Github：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>将网站上传到你的 Github Pages 上</p>
+<p>执行完后，应该会在你的 master 分支上看到有 <code>index.html</code> 文件，如果为空，说明这条命令没有成功执行，你可以需要查看一下你的 Github 设置。</p>
 
-<p>同时将 octopress 下的 source 上传到 Github 上：</p>
+<p>同时将 octopress 下上传到 Github 的 <code>source</code> 分支上：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -113,7 +124,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>注意，这里必须 push 到 <code>source</code> 分支上，<code>source</code> 分支上保存着文章等信息。<code>master</code> 分支会自己调用 <code>source</code> 分支上的信息。</p>
+<p>注意，这里必须 push 到 <code>source</code> 分支上。</p>
 
 <p>现在就可以访问 <code>joe.github.io</code> 来查看你的博客是否部署成功了。</p>
 
@@ -121,14 +132,14 @@
 
 <p>网站部署好了，终于可以开始写博客了。</p>
 
-<p>使用命令：</p>
+<p>创建标题为 <code>First post</code> 的文章：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;First post&quot;</span><span class="o">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>就会自动在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件
+<p>会在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件
 使用 <code>rake new_post</code> 的时候，博客标题尽量用英文，然后在编辑的时候将 title 改成中文，这样文件名就会有意义，如果用中文标题，文件名会自动改成汉字拼音。</p>
 
 <p>然后就可以使用喜欢的编辑器去编辑这个文件了：</p>
