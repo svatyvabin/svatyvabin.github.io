@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T15:20:49+08:00</updated>
+  <updated>2015-12-03T17:09:10+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -24,12 +24,11 @@
 
 <p>在终端下输入：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ruby ruby-dev nodejs rbenv
-</span><span class='line'>
-</span><span class='line'>sudo gem install execjs</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ruby ruby-dev nodejs rbenv <span class="c">#install software</span>
+</span><span class='line'>sudo gem install execjs
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>gem 下载速度比较慢，耐心等待，如果提示 <code>Error</code> 或者一直没有响应，可以用淘宝提供的<a href="https://ruby.taobao.org/"> gem 镜像</a>，修改 gem 和 bundle 这两个镜像。</p>
@@ -38,28 +37,31 @@
 
 <p>下载 octopress，并进入 octopress 目录：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'>cd octopress</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nb">cd </span>octopress
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>然后安装依赖：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gem install bundler
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install bundler
 </span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>注意每条命令的提示，确保每一步都是正确的。如果命令出错，应该是缺少某个软件，可以谷歌搜索一下解决。</p>
 
 <p>最后安装默认的主题：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake install
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>2. <a href="http://octopress.org/docs/deploying/github/">部署到 Github Pages 上</a></h2>
@@ -75,36 +77,40 @@
 
 <p>在 octopress 目录下，使用命令：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 <code>git@github.com:joe/joe.github.io.git</code> 的地址就粘贴到这里就行了（快捷键 <code>Ctrl + Shift + V</code>）。</p>
 
 <p>之后使用命令：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>生成博客。</p>
 
 <p>使用命令：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>将网站上传到你的 Github Pages 上</p>
 
 <p>同时将 octopress 下的 source 上传到 Github 上：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m "commit"
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;commit&quot;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>注意，这里必须 push 到 <code>source</code> 分支上，<code>source</code> 分支上保存着文章等信息。<code>master</code> 分支会自己调用 <code>source</code> 分支上的信息。</p>
@@ -117,8 +123,9 @@
 
 <p>使用命令：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["First post"]</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;First post&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>就会自动在 <code>source/_posts/</code> 目录下生成一个文件名为 <code>2015-12-02-first-post.markdown</code> 的文件
@@ -126,7 +133,7 @@
 
 <p>然后就可以使用喜欢的编辑器去编辑这个文件了：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -134,38 +141,41 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>---
 </span><span class='line'>layout: post
-</span><span class='line'>title: "First post"
+</span><span class='line'>title: <span class="s2">&quot;First post&quot;</span>
 </span><span class='line'>date: 2015-12-02 20:47:13 +0800
-</span><span class='line'>comments: true
-</span><span class='line'>categories: 
+</span><span class='line'>comments: <span class="nb">true</span>
+</span><span class='line'>categories:
 </span><span class='line'>---
-</span><span class='line'>Hello, Octopress.</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>Hello, Octopress.
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>除了最后一行外，其他的内容是创建博客的时候自动生成的。</p>
 
 <p>写好博客后，就可以发布到自己的 Github Pages 上了：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
 </span><span class='line'>rake deploy
 </span><span class='line'>
 </span><span class='line'>git add .
-</span><span class='line'>git commit -m "post title"
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>git commit -m <span class="s2">&quot;post title&quot;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>4. 待续</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate<span class="p">;</span>rake deploy<span class="p">;</span>git add .<span class="p">;</span>git commit -m <span class="s2">&quot;post title&quot;</span><span class="p">;</span>git push origin <span class="nb">source</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><img src="https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif" alt="test" /></p>
