@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://svatyvabin.github.io/atom.xml" rel="self"/>
   <link href="http://svatyvabin.github.io/"/>
-  <updated>2015-12-03T14:39:18+08:00</updated>
+  <updated>2015-12-03T14:42:16+08:00</updated>
   <id>http://svatyvabin.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -163,9 +163,6 @@
 
 
 <h2>4. 待续</h2>
-
-<p><img src="http://svatyvabin.github.io/source/source/_posts/hitCat.gif">
-<img src="https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif"></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;</span></code></pre></td></tr></table></div></figure>
