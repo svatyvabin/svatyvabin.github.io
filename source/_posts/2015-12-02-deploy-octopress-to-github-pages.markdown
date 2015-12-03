@@ -111,8 +111,6 @@ git push origin source
 ```
 
 ## 4. 待续
-{% img http://svatyvabin.github.io/source/source/_posts/hitCat.gif %}
-{% img https://raw.githubusercontent.com/svatyvabin/svatyvabin.github.io/source/source/_posts/hitCat.gif %}
 
 ```  
 rake generate;rake deploy;git add .;git commit -m "post title";git push origin source;
