@@ -111,4 +111,5 @@ git push origin source
 ```
 
 ## 4. 待续
-> A blogging framework for hackers.
+{% img http://placekitten.com/890/280 %}
+
