@@ -14,11 +14,18 @@ categories:
 ### 1.1 安装必要的软件
 在终端下输入：
 ```bash
-sudo apt-get install ruby ruby-dev nodejs rbenv #install software
+sudo apt-get install ruby ruby-dev nodejs rbenv
 sudo gem install execjs
 ```
 
-gem 下载速度比较慢，耐心等待，如果提示 ``Error`` 或者一直没有响应，可以用淘宝提供的[ gem 镜像](https://ruby.taobao.org/)，修改 gem 和 bundle 这两个镜像。
+如果 gem 提示 ``Error`` 之类的信息或者一直没有响应，可以用淘宝提供的[ gem 镜像](https://ruby.taobao.org/)修改 gem 和 bundle 这两个镜像：
+```
+gem sources --add https://ruby.taobao.org/ # 添加淘宝镜像
+gem sources --remove https://rubygems.org/ # 删除镜像
+gem sources -l # 确保只有 https://ruby.taobao.org
+
+bundle config mirror.https://rubygems.org https://ruby.taobao.org # 替换 bundle 镜像
+```
 
 ### 1.2 安装 Octopress
 下载 octopress，并进入 octopress 目录：
@@ -45,45 +52,44 @@ rake install
 根据 [Github Pages](https://pages.github.com/) 官网的简易教程，就可以创建一个自己的 Github Pages 网站了。
 需要注意的是，repository 名称前缀必须是你的用户名，例如你的用户名是 joe，那你的 repository 名称就必须是 joe.github.io。
 
-创建成功后，为了方便以后使用 git 命令，建议在 [github](https://github.com/settings/ssh) 的设置中添加本机的 ``SSH keys``，这样就不需要输入密码了，如何生成 ``SSH keys`` 可以参考[上面的官方教程](https://help.github.com/articles/generating-ssh-keys/#platform-linux)。
+创建成功后，为了方便以后使用 git 命令，建议在 [github](https://github.com/settings/ssh) 的设置中添加本机的 ``SSH keys``，这样就不需要输入密码了，如何生成 ``SSH keys`` 可以参考 [Github 的官方教程](https://help.github.com/articles/generating-ssh-keys/#platform-linux)。
 
 ### 2.2 部署到 Github Pages
-在 octopress 目录下，使用命令：
+在 octopress 目录下，执行：
 ```
 rake setup_github_pages
 ```
-之后会要求你输入 repository 地址，在你刚刚创建的 repository 主页上复制类似 ``git@github.com:joe/joe.github.io.git`` 的地址就粘贴到这里就行了（快捷键 ``Ctrl + Shift + V``）。
+然后粘贴你的 SSH repository 地址，如 ``git@github.com:joe/joe.github.io.git``。
 
-之后使用命令：
+之后生成博客主页：
 ```
 rake generate
 ```
-生成博客。
 
-使用命令：
+将博客主页上传到 Github：
 ```
 rake deploy
 ```
-将网站上传到你的 Github Pages 上
+执行完后，应该会在你的 master 分支上看到有 ``index.html`` 文件，如果为空，说明这条命令没有成功执行，你可以需要查看一下你的 Github 设置。
 
-同时将 octopress 下的 source 上传到 Github 上：
+同时将 octopress 下上传到 Github 的 ``source`` 分支上：
 ```
 git add .
 git commit -m "commit"
 git push origin source
 ```
-注意，这里必须 push 到 ``source`` 分支上，``source`` 分支上保存着文章等信息。``master`` 分支会自己调用 ``source`` 分支上的信息。
+注意，这里必须 push 到 ``source`` 分支上。
 
 现在就可以访问 ``joe.github.io`` 来查看你的博客是否部署成功了。
 
 ## 3. [写博客](http://octopress.org/docs/blogging/)
 网站部署好了，终于可以开始写博客了。
 
-使用命令：
+创建标题为 ``First post`` 的文章：
 ```
 rake new_post["First post"]
 ```
-就会自动在 ``source/_posts/`` 目录下生成一个文件名为 ``2015-12-02-first-post.markdown`` 的文件
+会在 ``source/_posts/`` 目录下生成一个文件名为 ``2015-12-02-first-post.markdown`` 的文件
 使用 ``rake new_post`` 的时候，博客标题尽量用英文，然后在编辑的时候将 title 改成中文，这样文件名就会有意义，如果用中文标题，文件名会自动改成汉字拼音。
 
 然后就可以使用喜欢的编辑器去编辑这个文件了：
