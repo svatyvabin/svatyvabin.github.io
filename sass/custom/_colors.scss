@@ -35,11 +35,9 @@
 //$solar-blue:      #268bd2;
 //$solar-cyan:      #2aa198;
 //$solar-green:     #859900;
-$base01: #fff;
-$base00: #000;
 
 
 /* Non highlighted code colors */
 //$pre-bg: $base03;
-//$pre-border: darken($base02, 5);
+$pre-border: darken($base02, 15);
 //$pre-color: $base1;
